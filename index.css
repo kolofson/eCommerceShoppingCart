@@ -1,0 +1,25 @@
+/** Code For Box w/ Text**/
+#subheadline {
+	font-weight: bold;
+	background-color: tan;
+	border-style: solid;
+	border-color: green;
+	border-width: 10px;
+	border-radius: 5px;
+	font-size: 30pt;
+	margin: 10px;
+	padding: 20px;
+	display:inline;
+}
+
+/** Photos Side by Side **/
+.row {
+  display: flex;
+  padding: 20px;
+  margin: 20px;
+}
+
+.column {
+  flex: 33.33%;
+  padding: 5px;
+}
