@@ -7,8 +7,17 @@
 		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 		<link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Permanent+Marker&family=Supermercado+One&display=swap" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	</head>
 	<body>
+		<!-- Connect to Database -->
+            <?php
+                $connection = mysqli_connect('localhost', 'kolofson', 'Freedom7926!', 'dextershomemadetreats');
+                //check 
+                if (!$connection) {
+                    die("Couldn't connect");
+				}
+			?>
 		<!-- Navigation Bar -->
 		<ul>
 			<li><a href="index.php">Home</a></li>

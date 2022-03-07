@@ -3,6 +3,17 @@
 ?>
 <html>
 	<head>
+		<script src="js/shopping_cart.js"></script>
+		<script src="js/merch.js"></script>
+		<style>
+			/** code for setting up quantity selection **/
+			label {
+				display: inline-block;
+			}
+			input {
+				text-align: center;
+			}
+		</style>
 	</head>
 	<body>
 		<!-- Page Start -->
@@ -17,9 +28,11 @@
 						<div class="card">
 							<img src="images/test.jpg" alt="Cookie Test" style="width:100%">
 							<h1>Oatmeal & Blueberry</h1>
-							<p class="price">$9.99</p>
-							<p>Oatmeal & Blueberries.</p>
-							<p><button>Add to Cart</button></p>
+							<p id="A1_price">$9.99</p>
+							<p id="A1_txt">Oatmeal & Blueberries.</p>
+							<label for="A1_quantity">Quantity:</label>
+							<input type="text" id="A1_quantity" value="1" size="1">
+							<p><button id="A1" onclick="addToCart(this)">Add to Cart</button></p>
 						</div>
 					</td>
 					<td>
@@ -27,9 +40,11 @@
 						<div class="card">
 							<img src="images/test.jpg" alt="Cookie Test2" style="width:100%">
 							<h1>Peanut Butter & Oats</h1>
-							<p class="price">$7.99</p>
-							<p>Peanut butter with crunchy oats.</p>
-							<p><button>Add to Cart</button></p>
+							<p id="A2_price">$7.99</p>
+							<p id="A2_txt">Peanut butter with crunchy oats.</p>
+							<label for="A2_quantity">Quantity:</label>
+							<input type="text" id="A2_quantity" value="1" size="1">
+							<p><button id="A2" onclick="addToCart(this)">Add to Cart</button></p>
 						</div>
 					</td>
 					<td>
@@ -37,9 +52,11 @@
 						<div class="card">
 							<img src="images/test.jpg" alt="Cookie Test3" style="width:100%">
 							<h1>Chicken Liver & Gizzards</h1>
-							<p class="price">$4.99</p>
-							<p>Turkey Liver & Gizzards.</p>
-							<p><button>Add to Cart</button></p>
+							<p id="A3_price">$4.99</p>
+							<p id="A3_txt">Chicken Liver & Gizzards.</p>
+							<label for="A3_quantity">Quantity:</label>
+							<input type="text" id="A3_quantity" value="1" size="1">
+							<p><button id="A3" onclick="addToCart(this)">Add to Cart</button></p>
 						</div>
 					</td>
 					<td>
@@ -47,9 +64,11 @@
 						<div class="card">
 							<img src="images/test.jpg" alt="Cookie Test3" style="width:100%">
 							<h1>Oatmeal & Carob Chunks</h1>
-							<p class="price">$6.99</p>
-							<p>Carob.</p>
-							<p><button>Add to Cart</button></p>
+							<p id="A4_price">$6.99</p>
+							<p id="A4_txt">Carob.</p>
+							<label for="A4_quantity">Quantity:</label>
+							<input type="text" id="A4_quantity" value="1" size="1">
+							<p><button id="A4" onclick="addToCart(this)">Add to Cart</button></p>
 						</div>
 					</td>
 				</tr>
@@ -60,9 +79,11 @@
 						<div class="card">
 							<img src="images/test.jpg" alt="Cookie Test3" style="width:100%">
 							<h1>Beef & Cheese</h1>
-							<p class="price">$6.99</p>
-							<p>Beef & cheese.</p>
-							<p><button>Add to Cart</button></p>
+							<p id="B1_price">$6.99</p>
+							<p id="B1_txt">Beef & cheese.</p>
+							<label for="B1_quantity">Quantity:</label>
+							<input type="text" id="B1_quantity" value="1" size="1">
+							<p><button id="B1" onclick="addToCart(this)">Add to Cart</button></p>
 						</div>
 					</td>
 					<td>
@@ -70,9 +91,11 @@
 						<div class="card">
 							<img src="images/test.jpg" alt="Cookie Test3" style="width:100%">
 							<h1>Chicken </h1>
-							<p class="price">$6.99</p>
-							<p>Chicken.</p>
-							<p><button>Add to Cart</button></p>
+							<p id="B2_price">$6.99</p>
+							<p id="B2_txt">Chicken.</p>
+							<label for="B2_quantity">Quantity:</label>
+							<input type="text" id="B2_quantity" value="1" size="1">
+							<p><button id="B2" onclick="addToCart(this)">Add to Cart</button></p>
 						</div>
 					</td>
 					<td>
@@ -80,9 +103,11 @@
 						<div class="card">
 							<img src="images/test.jpg" alt="Cookie Test3" style="width:100%">
 							<h1>Turkey</h1>
-							<p class="price">$7.99</p>
-							<p>Turkey.</p>
-							<p><button>Add to Cart</button></p>
+							<p id="B3_price">$7.99</p>
+							<p id="B3_txt">Turkey.</p>
+							<label for="B3_quantity">Quantity:</label>
+							<input type="text" id="B3_quantity" value="1" size="1">
+							<p><button id="B3" onclick="addToCart(this)">Add to Cart</button></p>
 						</div>
 					</td>
 					<td>
@@ -90,9 +115,11 @@
 						<div class="card">
 							<img src="images/test.jpg" alt="Cookie Test3" style="width:100%">
 							<h1>Bison</h1>
-							<p class="price">$6.99</p>
-							<p>Bison.</p>
-							<p><button>Add to Cart</button></p>
+							<p id="B4_price">$6.99</p>
+							<p id="B4_txt">Bison.</p>
+							<label for="B4_quantity">Quantity:</label>
+							<input type="text" id="B4_quantity" value="1" size="1">
+							<p><button id="B4" onclick="addToCart(this)">Add to Cart</button></p>
 						</div>
 					</td>
 				</tr>
